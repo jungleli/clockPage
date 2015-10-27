@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>葡萄城编程挑战赛题目二-Clock</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Home</a>
+        </div>
+        <div class="navbar-right" >
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../index.html">Clock</a>
+                </li>
+                <li>
+                    <a href="readMe.html">readMe</a>
+                </li>
+                <li>
+                    <a href="contactMe.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <div class="center">
+        <h2>项目说明</h2>
+        <hr>
+        <p>
+        <h2>本文档包含三部分：</h2>
+        1.功能描述
+        <br>2.实现思路
+        <br>3.代码结构
+        </p>
+
+        <hr>
+
+        <p>
+        <h3>1. 功能描述：</h3>
+        实现一个时钟，可设置不同的时区，显示相应时区的当前日期和时间。
+        </p>
+
+        <hr>
+
+        <p>
+        <h3>2. 实现思路：</h3>
+        <h4>2.1. 语言及平台</h4>
+        项目使用js+html5+css实现，编辑器webstorm/notepad++， 与平台无关，浏览器中可直接查看效果（chrome/firefox/IE9+）。
+        <h4>2.2. 功能实现</h4>
+        此功能的实现主要分为两个模块：
+        <br>(1)时钟的绘制，使用HTML5的新特性canvas来绘制时钟。将时钟的绘制拆分为三大部分，表盘、刻度和指针，分别实现各个部分的绘制。
+        <br>(2)时间的读取，需要根据不同的时区选择，将时间按照要求显示，实现时间的实时显示。
+        </p>
+
+        <hr>
+
+        <p>
+        <h3>3. 代码结构：</h3>
+        <h4>3.1. 界面呈现（clock.html）</h4>
+        html文件呈现界面，包含canvas和displayTime两个主要显示区域
+        <h4>3.2. 时钟的绘制(js/clock.js)</h4>
+        绘制表盘：function drawClockPanel(clockRadius)；
+        <br>绘制表心：function drawCenter()；
+        <br>绘制刻度：function drawScale(scaleNum, angle, radius, scaleLen, lineWidth)；
+        <br>绘制指针：function drawHandler(handLen, role, angle, lineWidth,lineColor)；
+        <br>绘制整个时钟，调用上述函数完成整个时钟的组合绘制，调用setTimeout()实现实时绘制时钟：function drawClock()；
+        <h4>3.3. 按时区动态显示时间（js/time.js）</h4>
+        <br>定义时区数据timezoneJson
+        <br>绑定timezones数据到select控件。
+        <br>根据时差值计算当前时区的时间：function getUTCTime(offset);
+        <br>动态获取并显示时间,：function displayTime();
+
+        </p>
+    </div>
+
+</div>
+<footer>
+    <hr>
+    Copyright © Li Junli 2015
+</footer>
+<!-- jQuery-->
+<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- main javascript-->
+<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/clock.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>

@@ -1,1 +1,75 @@
-"First pages."
+<!DOCTYPE html>
+<html>
+<head >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>葡萄城编程挑战赛题目二-Clock</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="navbar-right" >
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Clock</a>
+                </li>
+                <li>
+                    <a href="others/readMe.html">readMe</a>
+                </li>
+                <li>
+                    <a href="others/contactMe.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+    <div class="container">
+
+        <div class="center">
+            <div class="col-lg-4 left">
+            <canvas id="clock" width="300" height="300"></canvas>
+            </div>
+            <div class="col-lg-4 right">
+            <p>
+            <h4>Date:</h4>
+            <label id="date"></label>
+            <br>
+            <label id="weekday"></label>
+            </p>
+
+            <p>
+            <h4>Time:</h4>
+            <label id="time"></label>
+            </p>
+
+            <p>
+            <h4>Timezone: </h4>
+            <select id="timezone" >
+                <option value='8' selected="1">Beijing（EAT+8）</option>
+            </select>
+            </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<footer>
+    <hr>
+    Copyright © Li Junli 2015
+</footer>
+<!-- jQuery-->
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- main javascript-->
+<script src="js/time.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/clock.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>
