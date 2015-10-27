@@ -5,17 +5,17 @@ $(document).ready(function(){
 
   displayTime(8);
   $timezone.attr("onChange","selectTimezone()");
-  $.each(timezoneJson,function(i,val){
+  /*$.each(timezoneJson,function(i,val){
     var opt = new Option(val.city+"("+val.timezone+val.offset+")",val.offset);
     $timezone.append(opt);
-  });
-  /*
+  });*/
+
    //在IE 和 Chrome 下不支持本地ftp:协议，不能异步获取时区数据， 
    //解决方案：1. 部署到server. 2. 使用firefox执行文件。
    //此处为方便起见，将数据直接保存在json数组中。
 
    $.ajax({
-   //url:"json/timezone.json",
+   url:"json/timezone.json",
 
    type:"get",
    contentType: "text/plain;charset=utf-8",
@@ -33,7 +33,7 @@ $(document).ready(function(){
    alert('load json failure! If you are using Chrome or IE, please turn to Firefox open the index.html');
    console.log(textStatus);
    }
-   });*/
+   });
 });
 
 //选择时区，显示当前时区的时间
